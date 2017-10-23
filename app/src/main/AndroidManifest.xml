@@ -22,7 +22,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".ActivityTemas"></activity>
+=======
+        <activity android:name=".activity_aboutus" />
+        <activity android:name=".activityRules"></activity>
+>>>>>>> 4ce34acf2d369927a725d49d9534a9acbf760807
     </application>
 
 </manifest>
