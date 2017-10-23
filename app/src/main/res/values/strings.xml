@@ -8,5 +8,6 @@
     <string name="action_language">Cambiar de idioma</string>
     <string name="title_section1">Seleccion 1</string>
     <string name="title_section2">Seleccion 2</string>
-    <string name="title_section3">Seleccion 3</string>
+    <string name="title_section3">Tema</string>
+
 </resources>
