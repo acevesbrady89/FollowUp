@@ -87,9 +87,14 @@ public class ActivityMain extends AppCompatActivity
                 Toast.makeText(this,"AJUSTES",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(this, ActivityAjustes.class);
                 startActivity(intent);
-            } else if (id == R.id.nav_slideshow) {
-
-            } else if (id == R.id.nav_manage) {
+            } else if (id == R.id.nav_rules) {
+                Toast.makeText(this,"INSTRUCCIONES",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, activityRules.class);
+                startActivity(intent);
+            } else if (id == R.id.menu_AboutUs) {
+                Toast.makeText(this,"ABOUT US",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, activity_aboutus.class);
+                startActivity(intent);
 
             } else if (id == R.id.nav_share) {
 
