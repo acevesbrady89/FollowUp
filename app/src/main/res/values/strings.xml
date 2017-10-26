@@ -15,6 +15,8 @@
     <string name="InstructionBienvenido">¡Bienvenido a FollowUp!</string>
     <string name="InstructionExplicacion1">En este juego deberás adivinar quien tiene más seguidores en sus cuentas de Twitter o Facebook </string>
     <string name="InstructionExplicacion2">Lo único que debes hacer es hacer click en + o - según lo que creas correcto. Si lo tienes correcto podrás seguir acomulando puntos</string>
-    <string name="InstructionExplicacion3">Compite con tus amigos para ver quien alcanza los puntajes más altos, Buena Suerte!</string>
-
+    <string name="InstructionExplicacion3">Compite con tus amigos para ver quien alcanza los puntajes más altos. ¡Buena Suerte!</string>
+    <string name="Nuevo_Record">25 Puntos          ¡Nuevo Record!</string>
+    <string name="BotonIniciar">Iniciar</string>
+    <string name="Jugar">Jugar</string>
 </resources>

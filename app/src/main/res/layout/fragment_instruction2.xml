@@ -8,18 +8,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/InstructionExplicacion2"
-        android:textSize="25dp"
+        android:textSize="@dimen/Size25dp"
         android:layout_below="@+id/fragmentInstruction_bienvenida"
         android:paddingBottom="@dimen/Padding50dp"
+        android:padding="@dimen/Padding50dp"
         />
 
     <ImageView
 
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/Size400dp"
         android:layout_below="@+id/fragmentInstruction_desc1"
-        android:layout_height="wrap_content"
-        android:paddingBottom="@dimen/Padding50dp"
-        android:src="@drawable/Ejemplo"
+        android:layout_height="@dimen/Size350dp"
+        android:paddingBottom="@dimen/Size25dp"
+        android:src="@drawable/ejemplo"
         android:layout_centerHorizontal="true"
         />
 
