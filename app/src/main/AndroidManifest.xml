@@ -22,8 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ActivityTemas" />
         <activity android:name=".activity_aboutus" />
-        <activity android:name=".activityRules"></activity>
+        <activity android:name=".activityRules" />
+        <activity android:name=".ActivitySugerencias" />
+        <activity android:name=".ActivityLoggs" />
+        <activity android:name=".ActivitySonido" />
+        <activity android:name=".ActivityComents"></activity>
     </application>
 
 </manifest>
