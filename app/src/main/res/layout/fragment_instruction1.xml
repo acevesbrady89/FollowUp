@@ -40,7 +40,7 @@
         android:layout_below="@+id/fragmentInstruction_desc1"
         android:layout_height="90dp"
         android:paddingBottom="@dimen/Padding50dp"
-        android:src="@drawable/Facebook"
+        android:src="@drawable/facebook"
         android:layout_centerHorizontal="true"
         />
     <ImageView
@@ -50,7 +50,7 @@
         android:layout_below="@+id/fragmentInstruction_desc1"
         android:layout_toRightOf="@+id/fragmentInstruction_facebooklogo"
         android:paddingBottom="@dimen/Padding50dp"
-        android:src="@drawable/Twitter"
+        android:src="@drawable/twitter"
         android:layout_centerHorizontal="true"
         />
 

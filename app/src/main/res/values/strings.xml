@@ -6,12 +6,9 @@
     <string name="Menu_Aboutus">Acerca de </string>
     <string name="action_settings">Settings</string>
     <string name="action_language">Cambiar de idioma</string>
-    <string name="title_section1">Seleccion 1</string>
-    <string name="title_section2">Seleccion 2</string>
-<<<<<<< HEAD
+    <string name="title_section1">Loggin</string>
+    <string name="title_section2">Sonido</string>
     <string name="title_section3">Tema</string>
-=======
-    <string name="title_section3">Seleccion 3</string>
     <string name="title_sectionI1">Hoja 1</string>
     <string name="title_sectionI2">Hoja 2</string>
     <string name="title_sectionI3">Hoja 3</string>
@@ -19,6 +16,10 @@
     <string name="InstructionExplicacion1">En este juego deberás adivinar quien tiene más seguidores en sus cuentas de Twitter o Facebook </string>
     <string name="InstructionExplicacion2">Lo único que debes hacer es hacer click en + o - según lo que creas correcto. Si lo tienes correcto podrás seguir acomulando puntos</string>
     <string name="InstructionExplicacion3">Compite con tus amigos para ver quien alcanza los puntajes más altos, Buena Suerte!</string>
->>>>>>> 4ce34acf2d369927a725d49d9534a9acbf760807
+    <string name="activity_tema1">Default</string>
+    <string name="activity_tema2">Light</string>
+    <string name="activity_tema3">Night</string>
+    <string name="activity_tema4">Monocromatico</string>
+    <string name="activity_tema_botton">Aplicar</string>
 
 </resources>

@@ -19,7 +19,7 @@
         android:layout_below="@+id/fragmentInstruction_desc1"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/Padding50dp"
-        android:src="@drawable/Ejemplo"
+        android:src="@drawable/ejemplo"
         android:layout_centerHorizontal="true"
         />
 
