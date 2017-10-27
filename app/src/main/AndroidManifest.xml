@@ -29,6 +29,9 @@
         <activity android:name=".ActivityLoggs" />
         <activity android:name=".ActivitySonido" />
         <activity android:name=".ActivityMedallas"></activity>
+
+        <activity android:name=".ActivityComents"></activity>
+
     </application>
 
 </manifest>
