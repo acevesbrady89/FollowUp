@@ -15,7 +15,18 @@ public class Activity_splash extends AppCompatActivity {
         TimerTask task= new TimerTask() {
             @Override
             public void run() {
-                Intent intent=new Intent(Activity_splash.this,ActivityMain.class);
+                FirstTime Ft = new FirstTime().checkTime(Activity_splash.this);
+
+                Intent intent;
+
+                if (Ft.isFirstTime()){
+                    intent=new Intent(Activity_splash.this,ActivityMain.class);
+
+
+                }else {
+                    intent=new Intent(Activity_splash.this,activityRules.class);
+                }
+                Ft.savePreferences(Activity_splash.this);
                 startActivity(intent);
                 finish();
             }

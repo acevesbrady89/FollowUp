@@ -1,5 +1,6 @@
 package com.aceves89gmail.sergio.proyecto;
 
+import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -12,11 +13,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class activityRules extends AppCompatActivity {
     Toolbar toolbar_ajustes;
     TabLayout tabLayout;
     ViewPager viewPager;
+    Button buton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +29,15 @@ public class activityRules extends AppCompatActivity {
         toolbar_ajustes = (Toolbar) findViewById(R.id.toolbar_ajustes);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
+        buton=(Button) findViewById(R.id.fragment_instruction3_boton);
         setSupportActionBar(toolbar_ajustes);
         SectionsAdapterI mSection =
                 new SectionsAdapterI(getSupportFragmentManager());
         viewPager.setAdapter(mSection);
         tabLayout.setupWithViewPager(viewPager);
+
+
+
     }
 
     public class SectionsAdapterI extends FragmentPagerAdapter {
@@ -92,18 +100,40 @@ public class activityRules extends AppCompatActivity {
         }
     }
     public static class FragInstructions3 extends Fragment{
+        Button buton;
         public static FragInstructions3 newInstance(){
             FragInstructions3 fragment = new FragInstructions3();
+
             return fragment;
         }
+
+
         public FragInstructions3(){}
         @Nullable
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_instruction3, container, false);
+            View view =inflater.inflate(R.layout.fragment_instruction3, container, false);
+            buton=(Button) view.findViewById(R.id.fragment_instruction3_boton);
+
+            buton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(((activityRules)getActivity()),ActivityMain.class);
+                    startActivity(intent);
+                    ((activityRules)getActivity()).finish();
+                }
+            });
+
+
+            return view;
+
+
         }
+
+
     }
+
 
 }
 

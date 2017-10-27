@@ -25,28 +25,29 @@
         android:textColor="@color/FollowUp"
         />
     <TextView
+        android:padding="@dimen/Size25dp"
         android:id="@+id/fragmentInstruction_desc1"
         android:paddingTop="@dimen/Padding50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/InstructionExplicacion1"
-        android:textSize="25dp"
+        android:textSize="@dimen/Size25dp"
         android:layout_below="@+id/fragmentInstruction_bienvenida"
         android:paddingBottom="@dimen/Padding50dp"
         />
     <ImageView
         android:id="@+id/fragmentInstruction_facebooklogo"
-        android:layout_width="50dp"
+        android:layout_width="@dimen/Padding50dp"
         android:layout_below="@+id/fragmentInstruction_desc1"
-        android:layout_height="90dp"
+        android:layout_height="@dimen/Size90dp"
         android:paddingBottom="@dimen/Padding50dp"
         android:src="@drawable/facebook"
         android:layout_centerHorizontal="true"
         />
     <ImageView
         android:id="@+id/fragmentInstruction_twitterlogo"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/Padding50dp"
+        android:layout_height="@dimen/Size90dp"
         android:layout_below="@+id/fragmentInstruction_desc1"
         android:layout_toRightOf="@+id/fragmentInstruction_facebooklogo"
         android:paddingBottom="@dimen/Padding50dp"

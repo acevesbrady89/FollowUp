@@ -80,8 +80,10 @@ public class ActivityMain extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_medallas) {
+            Toast.makeText(this,"MEDALLAS",Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, ActivityMedallas.class);
+            startActivity(intent);
         } else {
             if (id == R.id.nav_ajustes) {
                 Toast.makeText(this,"AJUSTES",Toast.LENGTH_LONG).show();

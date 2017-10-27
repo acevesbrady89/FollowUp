@@ -27,7 +27,8 @@
         <activity android:name=".activityRules" />
         <activity android:name=".ActivitySugerencias" />
         <activity android:name=".ActivityLoggs" />
-        <activity android:name=".ActivitySonido"></activity>
+        <activity android:name=".ActivitySonido" />
+        <activity android:name=".ActivityMedallas"></activity>
     </application>
 
 </manifest>
