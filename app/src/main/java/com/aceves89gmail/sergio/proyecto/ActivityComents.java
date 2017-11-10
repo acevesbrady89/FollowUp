@@ -29,7 +29,7 @@ button.setOnClickListener(new View.OnClickListener() {
         intent.setData(Uri.parse("mailto:is703417@iteso.mx"));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
-        
+
 
 
 
