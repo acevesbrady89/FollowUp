@@ -28,10 +28,11 @@
         <activity android:name=".ActivitySugerencias" />
         <activity android:name=".ActivityLoggs" />
         <activity android:name=".ActivitySonido" />
-        <activity android:name=".ActivityMedallas"></activity>
-
-        <activity android:name=".ActivityComents"></activity>
-
+        <activity android:name=".ActivityMedallas" />
+        <activity android:name=".ActivityComents" />
+        <activity
+            android:name=".ActivitySettings"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>
