@@ -134,13 +134,6 @@ public class DataBaseHandler extends SQLiteOpenHelper{
         db.execSQL("INSERT INTO "+TABLE_USERS+" ("+ KEY_NAME+","+KEY_USERNAME+","+ KEY_FOLLOWERS+") VALUES ('Roger Federer','@rogerfederer',10352064)");
         db.execSQL("INSERT INTO "+TABLE_USERS+" ("+ KEY_NAME+","+KEY_USERNAME+","+ KEY_FOLLOWERS+") VALUES ('Papa Francisco','@Pontifex_es',14981867)");
 
-
-
-
-
-
-
-
     }
 
 
