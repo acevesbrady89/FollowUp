@@ -21,7 +21,7 @@ public class TestActivity extends AppCompatActivity {
         dbh= DataBaseHandler.getInstance(this);
         DataBaseControl dbc=new DataBaseControl();
         UpperClass upperClass =new UpperClass();
-        upperClass.cloneUpperClass(dbc.classCreator(5,dbh));
+        upperClass.cloneUpperClass(dbc.classCreator(96,dbh));
         a1.setText(upperClass.getHandle());
         a2.setText(upperClass.getName());
         a3.setText(""+upperClass.getFollowers()+"");

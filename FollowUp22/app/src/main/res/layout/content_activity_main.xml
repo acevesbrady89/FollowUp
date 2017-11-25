@@ -25,6 +25,7 @@
         android:text="@string/Jugar"
         android:layout_centerHorizontal="true"
         android:gravity="center"
+        android:onClick="onClick"
         android:layout_below="@+id/contentActivity_logo"
         android:layout_marginBottom="@dimen/Padding50dp"
         android:textSize="@dimen/Size32sp"

@@ -37,9 +37,10 @@
             android:id="@+id/upNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/handleUp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="56dp"
             android:text="NumeroUp"
             android:textSize="36sp" />
 
@@ -52,6 +53,23 @@
             android:layout_marginEnd="88dp"
             android:layout_toStartOf="@+id/nameUp"
             android:src="@drawable/facebook" />
+
+        <TextView
+            android:id="@+id/Puntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageUp"
+            android:layout_marginStart="44dp"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/seguidores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Puntos"
+            android:layout_toEndOf="@+id/imageUp"
+            android:text="Seguidores" />
 
     </RelativeLayout>
 
@@ -105,6 +123,7 @@
             android:layout_marginEnd="21dp"
             android:layout_marginTop="27dp"
             android:text="  Mas  "
+            android:onClick="onClick"
             android:textSize="24sp" />
 
         <Button
@@ -116,7 +135,9 @@
             android:layout_alignBottom="@+id/botonMas"
             android:layout_toEndOf="@+id/imageDown"
             android:text="Menos"
+            android:onClick="onClick"
             android:textSize="24sp" />
+
 
     </RelativeLayout>
 

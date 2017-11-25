@@ -74,7 +74,17 @@ public class ActivityMain extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
+    public void onClick(View v){
+        Intent intent;
+        switch (v.getId()){
+            case R.id.contentActivity_JugarTwitter:
+                intent = new Intent(this, ActivityJuego.class);
+                startActivity(intent);
+                finish();
+            break;
+        }
 
+    }
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
