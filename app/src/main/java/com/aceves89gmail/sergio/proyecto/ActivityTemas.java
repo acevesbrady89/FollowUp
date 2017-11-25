@@ -1,4 +1,4 @@
-package com.aceves89gmail.sergio.proyecto;
+package com.iteso.eduardo.followup2;
 
 
 import android.app.Activity;
