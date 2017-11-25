@@ -36,13 +36,13 @@ public class ActivityAjustes extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return  FragHome.newInstance();
+                    return  new ActivityLoggs();
                 case 1:
-                    return  FragHome.newInstance();
+                    return  new ActivitySonido();
                 case 2:
-                    return  FragHome.newInstance();
+                    return  new ActivityTemas();
                 default:
-                    return  FragHome.newInstance();
+                    return  new ActivityTemas();
             }
         };
         @Override
@@ -57,19 +57,6 @@ public class ActivityAjustes extends AppCompatActivity {
                 case 2: return getString(R.string.title_section3);
             }
             return super.getPageTitle(pos);
-        }
-    }
-    public static class FragHome extends Fragment{
-        public static FragHome newInstance(){
-            FragHome fragment = new FragHome();
-            return fragment;
-        }
-        public FragHome(){}
-        @Nullable
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            return inflater.inflate(R.layout.fragment_home, container, false);
         }
     }
 

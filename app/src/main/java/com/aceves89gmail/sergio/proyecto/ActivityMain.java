@@ -99,7 +99,9 @@ public class ActivityMain extends AppCompatActivity
             } else if (id == R.id.nav_share) {
 
             } else if (id == R.id.nav_send) {
-
+                Toast.makeText(this,"COMENTARIOS",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, ActivityComents.class);
+                startActivity(intent);
             }
         }
 

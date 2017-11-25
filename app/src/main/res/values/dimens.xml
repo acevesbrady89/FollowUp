@@ -7,4 +7,9 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="Padding50dp">50dp</dimen>
     <dimen name="Size32sp">32sp</dimen>
+    <dimen name="Size400dp">400dp</dimen>
+    <dimen name="Size350dp">350dp</dimen>
+    <dimen name="Size25dp">25dp</dimen>
+    <dimen name="Size90dp">90dp</dimen>
+    <dimen name= "Size200dp">200dp</dimen>
 </resources>
