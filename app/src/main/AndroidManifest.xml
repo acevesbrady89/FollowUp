@@ -32,7 +32,8 @@
         <activity android:name=".ActivityComents" />
         <activity
             android:name=".ActivitySettings"
-            android:label="@string/title_activity_settings"></activity>
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".ActivityJuego"></activity>
     </application>
 
 </manifest>
