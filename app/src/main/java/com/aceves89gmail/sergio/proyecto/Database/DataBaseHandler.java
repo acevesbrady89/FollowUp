@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBaseHandler extends SQLiteOpenHelper{
     private static final String DATABASE_NAME = "TwitterAccounts.db";
     private static final int DATABASE_VERSION=1;
-    private static final String TABLE_USERS = "Users";
+    public static final String TABLE_USERS = "Users";
     private static DataBaseHandler dataBaseHandler;
     //columnas
     public static final String KEY_ID = "idUser";
@@ -22,7 +22,7 @@ public class DataBaseHandler extends SQLiteOpenHelper{
     private DataBaseHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
-    public DataBaseHandler getInstance(Context context){
+    public static DataBaseHandler getInstance(Context context){
         if(dataBaseHandler==null){
             dataBaseHandler = new DataBaseHandler(context);
 

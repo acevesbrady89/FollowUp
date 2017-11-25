@@ -16,11 +16,7 @@
         <activity android:name=".ActivityAjustes" />
         <activity android:name=".FragAjustes" />
         <activity android:name=".Activity_splash">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".ActivityTemas" />
         <activity android:name=".activity_aboutus" />
@@ -28,7 +24,12 @@
         <activity android:name=".ActivitySugerencias" />
         <activity android:name=".ActivityLoggs" />
         <activity android:name=".ActivitySonido" />
-        <activity android:name=".ActivityComents"></activity>
+        <activity android:name=".ActivityComents" />
+        <activity android:name=".TestActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
     </application>
 
 </manifest>
