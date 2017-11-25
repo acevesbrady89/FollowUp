@@ -38,8 +38,6 @@ public class ActivityAjustes extends AppCompatActivity {
                 case 0:
                     return  new ActivityLoggs();
                 case 1:
-                    return  new ActivitySonido();
-                case 2:
                     return  new ActivityTemas();
                 default:
                     return  new ActivityTemas();
@@ -47,14 +45,13 @@ public class ActivityAjustes extends AppCompatActivity {
         };
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
         @Override
         public CharSequence getPageTitle(int pos) {
             switch (pos){
                 case 0: return getString(R.string.title_section1);
                 case 1: return getString(R.string.title_section2);
-                case 2: return getString(R.string.title_section3);
             }
             return super.getPageTitle(pos);
         }

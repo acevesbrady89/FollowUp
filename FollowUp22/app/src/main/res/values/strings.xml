@@ -7,8 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="action_language">Cambiar de idioma</string>
     <string name="title_section1">Loggin</string>
-    <string name="title_section2">Sonido</string>
-    <string name="title_section3">Tema</string>
+    <string name="title_section2">Ajustes</string>
     <string name="title_sectionI1">Hoja 1</string>
     <string name="title_sectionI2">Hoja 2</string>
     <string name="title_sectionI3">Hoja 3</string>
