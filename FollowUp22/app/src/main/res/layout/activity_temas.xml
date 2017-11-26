@@ -18,10 +18,14 @@
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@android:color/holo_orange_light"/>
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Seleciona un tema"
             android:gravity="center"
-            android:textSize="15dp"/>
+            android:textSize="20dp"/>
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -54,14 +58,18 @@
             android:padding="10dp"
             android:text="@string/activity_tema_botton"
             android:textSize="15dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/BackLight"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingTop="25dp"
+
             android:text="Musica"
-            android:textSize="15dp" />
+            android:textSize="20dp" />
 
        <LinearLayout
            android:layout_width="wrap_content"

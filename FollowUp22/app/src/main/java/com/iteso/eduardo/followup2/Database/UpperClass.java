@@ -24,6 +24,17 @@ public class UpperClass {
 
     }
 
+    /**
+     * True == Mayor
+     * False == Menor
+     * @return
+     */
+    public boolean esMenorOMayor(UpperClass upperClass){
+        if(upperClass.followers>=getFollowers())
+            return true;
+        return false;
+    }
+
     public String getHandle() {
         return handle;
     }

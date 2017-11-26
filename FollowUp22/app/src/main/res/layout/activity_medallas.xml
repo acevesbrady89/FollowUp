@@ -8,6 +8,10 @@
     tools:context="com.iteso.eduardo.followup2.ActivityMedallas">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/BackLight" />
+    <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,15 +40,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Ganaste 5 puntos"
                 android:paddingBottom="10dp"
+                android:text="Ganaste 5 puntos"
                 android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/holo_orange_light" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
+                android:paddingTop="10dp"
                 android:src="@drawable/trofeo" />
 
             <TextView
@@ -52,56 +62,85 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Ganaste 15 puntos"
                 android:paddingBottom="10dp"
+                android:text="High score de 20 puntos"
                 android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/BackLight" />
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
+                android:paddingTop="10dp"
                 android:src="@drawable/trofeo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Acertaste 6 prgutas seguidas"
                 android:paddingBottom="10dp"
+                android:text="Acertaste 6 preguntas seguidas"
                 android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/holo_orange_light" />
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:src="@drawable/trofeo2" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Perdiste 5 veces seguidas"
                 android:paddingBottom="10dp"
+                android:text="Jugaste 5 veces"
                 android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/BackLight" />
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:src="@drawable/trofeo2" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:paddingBottom="10dp"
                 android:text="Compartiste tu mejor puntuaion"
-                android:paddingBottom="10dp"
                 android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@android:color/holo_orange_light" />
+
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:src="@drawable/trofeo" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Compartiste tu historial de puntos"
                 android:paddingBottom="10dp"
+                android:text="Conseguiste 100 puntos"
                 android:textSize="20dp" />
 
 
