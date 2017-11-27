@@ -7,138 +7,182 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.iteso.eduardo.followup2.ActivityJuego">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5">
-
+        android:orientation="horizontal"
+        android:layout_weight=".3">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".5">
+            <ImageView
+                android:id="@+id/imageUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:src="@drawable/facebook"/>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".5">
+            <TextView
+                android:id="@+id/handleUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Kim Kardashian West"/>
+            <TextView
+                android:id="@+id/nameUp"
+                android:textSize="15dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handle"/>
+            <TextView
+                android:id="@+id/upNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:layout_gravity="center"
+                android:paddingTop="20dp"
+                android:text="1000,000,000"/>
+            <TextView
+                android:id="@+id/seguidores"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:text="Seguidores"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="425dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight=".025">
         <TextView
-            android:id="@+id/nameUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="57dp"
-            android:layout_marginTop="35dp"
-            android:text="NameUp"
-            android:textSize="24sp" />
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/BackLight" />
 
-        <TextView
-            android:id="@+id/handleUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/nameUp"
-            android:layout_below="@+id/nameUp"
-            android:layout_marginTop="26dp"
-            android:text="HandleU"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/upNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/handleUp"
-            android:layout_marginEnd="35dp"
-            android:layout_marginTop="56dp"
-            android:text="NumeroUp"
-            android:textSize="36sp" />
-
-        <ImageView
-            android:id="@+id/imageUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/upNumber"
-            android:layout_marginBottom="28dp"
-            android:layout_marginEnd="88dp"
-            android:layout_toStartOf="@+id/nameUp"
-            android:src="@drawable/facebook" />
-
-        <TextView
-            android:id="@+id/Puntos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/imageUp"
-            android:layout_marginStart="44dp"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/seguidores"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/Puntos"
-            android:layout_toEndOf="@+id/imageUp"
-            android:text="Seguidores" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"><![CDATA[">
+        android:orientation="horizontal"
+        android:layout_weight=".4">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".3">
 
+            <ImageView
+                android:id="@+id/imageDown"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitCenter"
+                android:layout_weight=".7"
+                android:src="@drawable/facebook" />
+            <TextView
+                android:id="@+id/Puntos"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".3"
+                android:gravity="top|center"
+                android:textSize="40dp"
+                android:text="20"/>
+        </LinearLayout>
+        <LinearLayout
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight=".7">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".2"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/handleDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center"
+                    android:text="Neil Patrick Harris"/>
+                <TextView
+                    android:id="@+id/nameDown"
+                    android:textSize="15dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Handle"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiene"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight=".4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/botonMas"
+                    style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".4"
+                    android:backgroundTint="@android:color/holo_green_light"
+                    android:elevation="0dp"
+                    android:onClick="onClick"
+                    android:text="Mas"
+                    android:textSize="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight=".2"
+                    android:layout_height="0dp" />
+                <Button
+                    android:id="@+id/botonMenos"
+                    style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".4"
+                    android:backgroundTint="@android:color/holo_orange_light"
+                    android:onClick="onClick"
+                    android:text="Menos"
+                    android:textSize="20dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight=".1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="19dp"
 
+                    android:gravity="center"
+                    android:text="Seguidores"/>
 
-        ]]>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/nameDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="39dp"
-            android:layout_marginTop="29dp"
-            android:text="NameDoun"
-            android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/handleDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/nameDown"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="46dp"
-            android:layout_toEndOf="@+id/imageDown"
-            android:text="HandleD"
-            android:textSize="20dp" />
-
-        <ImageView
-            android:id="@+id/imageDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/handleDown"
-            android:layout_marginEnd="68dp"
-            android:layout_toStartOf="@+id/nameDown"
-            android:src="@drawable/facebook" />
-
-        <Button
-            android:id="@+id/botonMas"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/imageDown"
-            android:layout_below="@+id/imageDown"
-            android:layout_marginEnd="21dp"
-            android:layout_marginTop="27dp"
-            android:text="  Mas  "
-            android:onClick="onClick"
-            android:textSize="24sp" />
-
-        <Button
-            android:id="@+id/botonMenos"
-            style="@style/Widget.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/botonMas"
-            android:layout_alignBottom="@+id/botonMas"
-            android:layout_toEndOf="@+id/imageDown"
-            android:text="Menos"
-            android:onClick="onClick"
-            android:textSize="24sp" />
-
-
-    </RelativeLayout>
 
 </LinearLayout>

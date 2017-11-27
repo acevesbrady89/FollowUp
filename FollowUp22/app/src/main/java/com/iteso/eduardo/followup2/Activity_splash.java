@@ -26,7 +26,7 @@ public class Activity_splash extends AppCompatActivity {
                 }else {
                     intent=new Intent(Activity_splash.this,activityRules.class);
                 }
-                Ft.savePreferences(Activity_splash.this);
+                Ft.saveFT(Activity_splash.this);
                 startActivity(intent);
                 finish();
             }

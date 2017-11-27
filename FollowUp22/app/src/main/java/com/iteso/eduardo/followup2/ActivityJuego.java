@@ -10,6 +10,7 @@ import com.iteso.eduardo.followup2.Database.DataBaseControl;
 import com.iteso.eduardo.followup2.Database.DataBaseHandler;
 import com.iteso.eduardo.followup2.Database.UpperClass;
 
+import java.text.DecimalFormat;
 import java.util.Vector;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -72,8 +73,11 @@ public class ActivityJuego extends AppCompatActivity {
                     lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(),dbh));
                     pintar();
                 }
-               // else
-                    //GGS
+               else {
+                    intent = new Intent(this, ActivityPerdiste.class);
+                    startActivity(intent);
+                    finish();
+                }
                 break;
             case R.id.botonMenos:
                 if(lowerClass.esMenorOMayor(upperClass)) {
@@ -82,8 +86,11 @@ public class ActivityJuego extends AppCompatActivity {
                     lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(),dbh));
                     pintar();
                 }
-               // else
-                    //GGS
+                else {
+                    intent = new Intent(this, ActivityPerdiste.class);
+                    startActivity(intent);
+                    finish();
+                }
                 break;
 
         }
@@ -91,11 +98,12 @@ public class ActivityJuego extends AppCompatActivity {
 
     }
     public void pintar(){
+        DecimalFormat formato=new DecimalFormat("###,###,###");
         NombreUp.setText(upperClass.getName());
         NombreDown.setText(lowerClass.getName());
         HandlerUp.setText(upperClass.getHandle());
         HandlerDown.setText(lowerClass.getHandle());
-        Followers.setText(""+upperClass.getFollowers()+"");
+        Followers.setText(""+formato.format(upperClass.getFollowers())+"");
         Puntostxt.setText(""+puntos+"");
     }
 }
