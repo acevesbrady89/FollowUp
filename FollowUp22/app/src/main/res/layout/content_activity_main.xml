@@ -65,7 +65,7 @@
                android:orientation="vertical">
                <Button
                    android:id="@+id/contentActivity_JugarTwitter"
-                   android:layout_width="100"
+                   android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="@string/Jugar"
                    android:gravity="center"

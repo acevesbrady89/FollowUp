@@ -15,21 +15,18 @@
     <activity android:name=".ActivityAjustes" />
     <activity android:name=".FragAjustes" />
     <activity android:name=".Activity_splash">
-
-    </activity>
-
-    <activity android:name=".activity_aboutus" />
-    <activity android:name=".activityRules" />
-
-    <activity android:name=".ActivityComents" />
-    <activity android:name=".TestActivity">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-    <activity android:name=".ActivityMedallas" />
+
+    <activity android:name=".activity_aboutus" />
+    <activity android:name=".activityRules" />
+
+    <activity android:name=".ActivityComents" />
+        <activity android:name=".ActivityMedallas" />
     <activity android:name=".ActivityJuego">
     </activity>
     </application>
