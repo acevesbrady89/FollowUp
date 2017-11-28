@@ -6,21 +6,38 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.iteso.eduardo.followup2.ActivityComents">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".07"
+        android:layout_gravity="center"
+        android:background="@color/BackLight"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mandanos tus comentarios"
+        android:layout_height="0dp"
+        android:layout_weight=".2"
+        android:text="Mandanos tus comentarios        Ayudanos a mejorar"
         android:textSize="@dimen/Size25dp"
-        android:textAlignment="center"
-        android:layout_marginBottom="@dimen/Size90dp"
-        />
-
+        android:textAlignment="center" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_orange_light"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/logo"
+        android:layout_weight=".2"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/BackLight"/>
     <EditText
         android:id="@+id/activitycoments_EditText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       android:layout_weight=".6"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
         android:textAlignment="textStart"
         android:hint="Escribe aqui"
         android:inputType="text"
@@ -29,8 +46,8 @@
     <Button
         android:id="@+id/activitycoments_Button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight=".3"
+        android:layout_height="0dp"
+        android:layout_weight=".15"
         android:text="Enviar"
 
         />

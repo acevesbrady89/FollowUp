@@ -13,21 +13,22 @@ public class DataBaseControl {
     public UpperClass classCreator(int idUser, DataBaseHandler dh){
         UpperClass upperClass= new UpperClass();
         Cursor cursor;
-        String selectQuery="SELECT  " +DataBaseHandler.KEY_ID + ","
+        String selectQuery="SELECT " +DataBaseHandler.KEY_ID + ","
                 + DataBaseHandler.KEY_USERNAME + ","
                 + DataBaseHandler.KEY_NAME + ","
+                + DataBaseHandler.KEY_IMG + ","
                 + DataBaseHandler.KEY_FOLLOWERS
                 + " FROM " + DataBaseHandler.TABLE_USERS
-                + " WHERE " + DataBaseHandler.KEY_ID + "= "
+                + " WHERE " + DataBaseHandler.KEY_ID + " = "
                 + idUser;
-        System.out.println("selectQuery");
         SQLiteDatabase db= dh.getReadableDatabase();
         cursor=db.rawQuery(selectQuery, null);
         if (cursor.moveToFirst()){
             upperClass.setId(cursor.getInt(0));
             upperClass.setName(cursor.getString(1));
             upperClass.setHandle(cursor.getString(2));
-            upperClass.setFollowers(cursor.getInt(3));
+           upperClass.setFollowers(cursor.getInt(4));
+            upperClass.setImagen(cursor.getString(3));
         }
         try {
             cursor.close();

@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitCenter"
-                android:src="@drawable/facebook"/>
+                android:src="@drawable/twitter"/>
         </LinearLayout>
         <LinearLayout
             android:paddingTop="20dp"
@@ -91,7 +91,7 @@
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
                 android:layout_weight=".7"
-                android:src="@drawable/facebook" />
+                android:src="@drawable/twitter" />
             <TextView
                 android:id="@+id/Puntos"
                 android:layout_width="match_parent"

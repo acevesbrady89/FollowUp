@@ -1,69 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
     tools:context="com.iteso.eduardo.followup2.ActivityMain"
     tools:showIn="@layout/app_bar_activity_main">
-
-    <ImageView
-        android:id="@+id/contentActivity_logo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/Size200dp"
-        android:paddingBottom="@dimen/Padding50dp"
-        android:src="@drawable/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/Size32sp"
-        />
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight=".7">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:background="@android:color/holo_orange_light"/>
+        <ImageView
+            android:id="@+id/contentActivity_logo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:src="@drawable/logo"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:background="@color/BackLight"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/contentActivity_JugarTwitter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Jugar"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:onClick="onClick"
-        android:layout_below="@+id/contentActivity_logo"
-        android:layout_marginBottom="@dimen/Padding50dp"
-        android:textSize="@dimen/Size32sp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:orientation="vertical">
 
-        />
-    <Button
-        android:id="@+id/contentActivity_JugarFacebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Jugar"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/contentActivity_JugarTwitter"
-        android:textSize="@dimen/Size32sp"
-       android:background="@color/White"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".45"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".25">
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5">
+                    <Button
+                        android:id="@+id/contentActivity_JugarTwitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:onClick="onClick"
+                        android:text="@string/Jugar" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".25">
+                </LinearLayout>
+            </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".05"></LinearLayout>
 
-
-
-        />
-
-    <ImageView
-        android:id="@+id/contentActivity_facebooklogo"
-        android:layout_width="@dimen/Padding50dp"
-        android:layout_height="@dimen/Padding50dp"
-        android:src="@drawable/facebook"
-        android:layout_below="@+id/contentActivity_JugarTwitter"
-        android:layout_toStartOf="@+id/contentActivity_JugarFacebook"
-    />
-    <ImageView
-        android:id="@+id/contentActivity_twitterlogo"
-        android:layout_width="@dimen/Padding50dp"
-        android:layout_height="@dimen/Padding50dp"
-        android:src="@drawable/twitter"
-        android:layout_centerVertical="true"
-        android:layout_toStartOf="@+id/contentActivity_JugarTwitter"
-        android:layout_below="@id/contentActivity_logo"
-      />
-
-
-
-</RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".45"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/contentActivity_twitterlogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/twitter" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,115 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.iteso.eduardo.followup2.ActivityPerdiste">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight=".15">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".15"
+            android:background="@android:color/holo_orange_light"/>
+        <TextView
+            android:id="@+id/respIncorrecta"
+            android:layout_width="264dp"
+            android:layout_height="0dp"
+            android:layout_weight=".7"
+            android:text="¡Respuesta incorrecta!"
+            android:gravity="center"
+            android:textColor="?android:attr/colorError"
+            android:textSize="24sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".15"
+            android:background="@color/BackLight"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight=".35">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight=".5">
+            <ImageView
+                android:id="@+id/perdiste_imagen1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".6"
+                app:srcCompat="@drawable/twitter"/>
+            <TextView
+                android:id="@+id/perdiste_Name1"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:textSize="20dp"
+                android:text="textview"
+                android:layout_weight=".1" />
+            <TextView
+                android:id="@+id/perdiste_Followers1"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:text="TextView"
+                android:layout_weight=".1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight=".5">
+            <ImageView
+                android:id="@+id/perdiste_imagen2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".6"
+                app:srcCompat="@drawable/twitter" />
+            <TextView
+                android:id="@+id/perdiste_Name2"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="0dp"
+                android:textSize="20dp"
+                android:text="textview"
+                android:layout_weight=".1" />
+            <TextView
+                android:id="@+id/perdisteFollowers2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:layout_weight=".1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight=".35">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".45"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center|right"
+                android:layout_height="0dp"
+                android:text="Puntaje :"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center|right"
+                android:layout_height="0dp"
+                android:text="High Score :"
+                android:textSize="20sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1"></LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".45"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/perdiste_puntos"
+                android:layout_width="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center|left"
+                android:layout_height="0dp"
+                android:text="18"
+                android:textSize="50sp" />
 
-    <TextView
-        android:id="@+id/respIncorrecta"
-        android:layout_width="264dp"
-        android:layout_height="45dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="¡Respuesta incorrecta!"
-        android:textAlignment="center"
-        android:textColor="?android:attr/colorError"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="42dp" />
+            <TextView
+                android:id="@+id/highScore"
+                android:layout_width="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center|left"
+                android:layout_height="0dp"
+                android:text="18"
+                android:textSize="60sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight=".15">
+        <Button
+            android:id="@+id/perdiste_newgame"
+            style="@android:style/Widget.Material.Button.Toggle"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="Jugar"
+            android:onClick="onClick"/>
+        <Button
+            android:id="@+id/regresarMenu"
+            style="@android:style/Widget.Material.Button.Toggle"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:onClick="onClick" />
+    </LinearLayout>
 
-    <ImageView
-        android:id="@+id/perdiste_imagen1"
-        android:layout_width="164dp"
-        android:layout_height="171dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/respIncorrecta"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="23dp"
-        app:srcCompat="@drawable/ejemplo"
-        tools:layout_editor_absoluteX="32dp"
-        tools:layout_editor_absoluteY="87dp" />
 
-    <ImageView
-        android:id="@+id/perdiste_imagen2"
-        android:layout_width="163dp"
-        android:layout_height="171dp"
-        android:layout_alignTop="@+id/perdiste_imagen1"
-        android:layout_marginStart="18dp"
-        android:layout_toEndOf="@+id/perdiste_imagen1"
-        app:srcCompat="@drawable/ejemplo"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="87dp" />
 
-    <TextView
-        android:id="@+id/perdiste_Followers1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/perdisteFollowers2"
-        android:layout_alignBottom="@+id/perdisteFollowers2"
-        android:layout_toEndOf="@+id/perdiste_newgame"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="108dp"
-        tools:layout_editor_absoluteY="265dp" />
-
-    <TextView
-        android:id="@+id/perdisteFollowers2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/respIncorrecta"
-        android:layout_below="@+id/perdiste_imagen1"
-        android:layout_marginTop="12dp"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="265dp" />
-
-    <Button
-        android:id="@+id/regresarMenu"
-        style="@android:style/Widget.DeviceDefault.Button.Toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/perdiste_newgame"
-        android:layout_below="@+id/perdiste_newgame"
-        android:layout_marginTop="16dp"
-        android:text="Home"
-        android:onClick="onClick"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="433dp" />
-
-    <Button
-        android:id="@+id/perdiste_newgame"
-        style="@android:style/Widget.Material.Button.Toggle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView6"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Jugar"
-        android:onClick="onClick"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="368dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="100dp"
-        android:layout_height="32dp"
-        android:layout_alignStart="@+id/perdisteFollowers2"
-        android:layout_below="@+id/perdisteFollowers2"
-        android:layout_marginTop="33dp"
-        android:text="Puntaje :"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="319dp" />
-
-    <TextView
-        android:id="@+id/perdiste_puntos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView6"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_alignStart="@+id/perdiste_imagen2"
-        android:text="18"
-        android:textSize="24sp" />
-
-</RelativeLayout>
+</LinearLayout>
