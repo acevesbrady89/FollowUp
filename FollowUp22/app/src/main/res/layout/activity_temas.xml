@@ -79,12 +79,14 @@
                 android:id="@+id/activity_temas_sonido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:src="@android:drawable/ic_lock_silent_mode_off" />
 
             <ImageButton
                 android:id="@+id/activity_temas_mute"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClick"
                 android:src="@android:drawable/ic_lock_silent_mode" />
         </LinearLayout>
         <ImageView

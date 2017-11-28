@@ -1,8 +1,11 @@
 package com.iteso.eduardo.followup2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -36,12 +39,17 @@ public class ActivityJuego extends AppCompatActivity {
     DataBaseHandler dbh;
     private Vector<Integer> randoms;
     ImageView upIMG, downIMG;
+    private MediaPlayer mediaPlayer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         randoms = new Vector<>();
         setContentView(R.layout.activity_juego);
+        SharedPreferences sharedPreferences =
+                ActivityJuego.this.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        mediaPlayer = MediaPlayer.create(this, R.raw.musica);
         dbh = DataBaseHandler.getInstance(this);
         puntos = 0;
         dbc = new DataBaseControl();
@@ -53,6 +61,9 @@ public class ActivityJuego extends AppCompatActivity {
         Followers = (TextView) findViewById(R.id.upNumber);
         upIMG = (ImageView) findViewById(R.id.imageUp);
         downIMG = (ImageView) findViewById(R.id.imageDown);
+        if (sharedPreferences.getBoolean("SND", true)) {
+            mediaPlayer.start();
+        }
 
 
         upperClass = new UpperClass();
@@ -63,14 +74,15 @@ public class ActivityJuego extends AppCompatActivity {
         lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(), dbh));
         pintar();
 
+
     }
 
     public int generateRandomInt() {
-       int num = 1;
-        Random rand=new Random();
+        int num = 1;
+        Random rand = new Random();
         boolean check = false;
         while (!check) {
-            num=rand.nextInt(96)+1;
+            num = rand.nextInt(96) + 1;
             //num = ThreadLocalRandom.current().nextInt(1, 96);
             if (!randoms.contains(num))
                 check = true;
@@ -92,8 +104,8 @@ public class ActivityJuego extends AppCompatActivity {
                 } else {
                     intent = new Intent(this, ActivityPerdiste.class);
 
-                    intent.putExtra("UP", upperClass );
-                    intent.putExtra("LOW", lowerClass );
+                    intent.putExtra("UP", upperClass);
+                    intent.putExtra("LOW", lowerClass);
                     intent.putExtra("PT", puntos);
                     startActivity(intent);
                     finish();
@@ -108,8 +120,8 @@ public class ActivityJuego extends AppCompatActivity {
                     pintar();
                 } else {
                     intent = new Intent(this, ActivityPerdiste.class);
-                    intent.putExtra("UP",  upperClass);
-                    intent.putExtra("LOW", lowerClass );
+                    intent.putExtra("UP", upperClass);
+                    intent.putExtra("LOW", lowerClass);
                     intent.putExtra("PT", puntos);
                     startActivity(intent);
                     finish();
@@ -183,7 +195,24 @@ public class ActivityJuego extends AppCompatActivity {
 
         }
     }
-}
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedPreferences = ActivityJuego.this.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        if (sharedPreferences.getBoolean("SND", false)) {
+            mediaPlayer.start();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        SharedPreferences sharedPreferences = ActivityJuego.this.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        if (sharedPreferences.getBoolean("SND", false)) {
+            mediaPlayer.pause();
+        }
+    }
+}
 
 

@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
  */
 
 public class FirstTime {
-    private int puntosTemp;
+
     private int puntosHigh;
     private boolean sound;
     private int juegos;
@@ -26,13 +26,6 @@ public class FirstTime {
 
     private int puntosTotales;
 
-    public int getPuntosTemp() {
-        return puntosTemp;
-    }
-
-    public void setPuntosTemp(int puntosTemp) {
-        this.puntosTemp = puntosTemp;
-    }
 
     public int getPuntosHigh() {
         return puntosHigh;
@@ -77,7 +70,13 @@ public class FirstTime {
     }
 
     public FirstTime checkTime(Context context){
-
+/**
+ *      Todo lo que esta aqui abajo es como para leer, si en alguna clase necesitas leer lo haces igual que aquí
+ *      Primero inicializas SharedPreferences (literal copiando y pegado desde SharedPreferences hasta Mode Private;)
+ *      Por ejemplo si quieres saber cuantos juegos hay en total necesitas pedir la variable JGS de la manera
+ *      sharedPreferences.getInt("JGS,0); El cero es en caso de que no la encuentre el valor que mandará.
+ *
+ */
         SharedPreferences sharedPreferences =
                 context.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
         FirstTime una=new FirstTime();
@@ -85,17 +84,46 @@ public class FirstTime {
         una.setSound(sharedPreferences.getBoolean("SND",true));
         una.setJuegos(sharedPreferences.getInt("JGS", 0));
         una.setPuntosHigh(sharedPreferences.getInt("PTH", 0));
-        una.setPuntosTemp(sharedPreferences.getInt("PTTMP", 0));
         una.setTema(sharedPreferences.getString("TM", null));
         una.setPuntosTotales(sharedPreferences.getInt("PTT", 0));
         return una;
     }
+
+    /**
+     * Estas funciones las hice para mandar datos a sharedPreferences, en tu clase tienes que
+     * crear un FirstTime ft = new FirstTime para poder llamar a estos metodos.
+     *
+     */
     public void saveFT (Context context ){
         SharedPreferences sharedPreferences = context.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean("FT", true);
         editor.apply();
     }
+    public void sonidOn(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("SND", true);
+        editor.apply();
+    }
+    public void sonidOff(Context context){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("SND", false);
+        editor.apply();
+    }
+    public void saveActPerdiste(Context context, int score){
+        SharedPreferences sharedPreferences = context.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        if(sharedPreferences.getInt("PTH",0)<score) {
+            editor.putInt("PTH", score);
 
+        }
+        setPuntosTotales(getPuntosTotales()+score);
+        setJuegos(getJuegos()+1);
+        editor.putInt("PTT", getPuntosTotales());
+        editor.putInt("JGS",getJuegos());
+        editor.apply();
+    }
 
 }

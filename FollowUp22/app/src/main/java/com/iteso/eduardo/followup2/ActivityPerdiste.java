@@ -1,6 +1,8 @@
 package com.iteso.eduardo.followup2;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
@@ -21,11 +23,12 @@ import java.text.DecimalFormat;
 public class ActivityPerdiste extends AppCompatActivity {
     ImageView pd1, pd2;
     TextView followers1, followers2, name1,name2;
-    TextView puntaje;
+    TextView puntaje, puntajeHigh;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perdiste);
+
         pd1=(ImageView) findViewById(R.id.perdiste_imagen1);
         pd2=(ImageView) findViewById(R.id.perdiste_imagen2);
         followers1=(TextView) findViewById(R.id.perdiste_Followers1);
@@ -33,11 +36,16 @@ public class ActivityPerdiste extends AppCompatActivity {
         name1=(TextView) findViewById(R.id.perdiste_Name1);
         name2=(TextView) findViewById(R.id.perdiste_Name2);
         puntaje=(TextView) findViewById(R.id.perdiste_puntos);
+        puntajeHigh=(TextView) findViewById(R.id.highScore);
         DecimalFormat formato = new DecimalFormat("###,###,###");
         Intent data= getIntent();
         UpperClass upperClass= data.getParcelableExtra("UP");
         UpperClass lowerClass= data.getParcelableExtra("LOW");
         int puntos=data.getIntExtra("PT",0);
+
+        SharedPreferences sharedPreferences =
+                ActivityPerdiste.this.getSharedPreferences("com.iteso.aceves89gmail.sergio.proyecto", Context.MODE_PRIVATE);
+        FirstTime una= new FirstTime();
         name1.setText(upperClass.getHandle());
         name2.setText(lowerClass.getHandle());
         new Imagen1().execute(upperClass.getImagen());
@@ -45,6 +53,10 @@ public class ActivityPerdiste extends AppCompatActivity {
         followers1.setText( "" + formato.format(upperClass.getFollowers()) + "");
         followers2.setText( "" + formato.format(lowerClass.getFollowers()) + "");
         puntaje.setText(""+puntos+"");
+        una.saveActPerdiste(ActivityPerdiste.this, puntos);
+        puntajeHigh.setText(""+sharedPreferences.getInt("PTH",0)+"");
+
+
     }
 
     public void onClick(View v){
