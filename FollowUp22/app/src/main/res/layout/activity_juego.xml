@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:scaleType="fitCenter"
-                android:src="@drawable/facebook"/>
+                android:src="@drawable/twitter"/>
         </LinearLayout>
         <LinearLayout
             android:paddingTop="20dp"
@@ -31,15 +31,15 @@
             android:orientation="vertical"
             android:layout_weight=".5">
             <TextView
-            android:id="@+id/nameUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="19dp"
-            android:paddingBottom="20dp"
-            android:layout_gravity="center"
-            android:text="Kim Kardashian West"/>
-            <TextView
                 android:id="@+id/handleUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="19dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="center"
+                android:text="Kim Kardashian West"/>
+            <TextView
+                android:id="@+id/nameUp"
                 android:textSize="15dp"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
                 android:layout_height="0dp"
                 android:scaleType="fitCenter"
                 android:layout_weight=".7"
-                android:src="@drawable/facebook" />
+                android:src="@drawable/twitter" />
             <TextView
                 android:id="@+id/Puntos"
                 android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                 android:gravity="center"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/nameDown"
+                    android:id="@+id/handleDown"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="19dp"
@@ -123,7 +123,7 @@
                     android:gravity="center"
                     android:text="Neil Patrick Harris"/>
                 <TextView
-                    android:id="@+id/handleDown"
+                    android:id="@+id/nameDown"
                     android:textSize="15dp"
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"

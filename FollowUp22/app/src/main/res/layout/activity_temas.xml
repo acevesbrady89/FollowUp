@@ -28,6 +28,7 @@
             android:textSize="20dp"/>
 
         <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -35,6 +36,7 @@
             android:padding="20dp">
 
             <RadioButton
+                android:checked="true"
                 android:id="@+id/activity_temas_tema2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +56,6 @@
             android:id="@+id/activiy_temas_boton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onClick"
             android:padding="10dp"
             android:text="@string/activity_tema_botton"
             android:textSize="15dp" />

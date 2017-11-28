@@ -1,6 +1,7 @@
 package com.iteso.eduardo.followup2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,13 +18,16 @@ import android.widget.Toast;
 
 public class ActivityMain extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    MediaPlayer mediaPlayer;
+    boolean musicControl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        //mediaPlayer = MediaPlayer.create(this, R.raw.musica);
+       // mediaPlayer.start();
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

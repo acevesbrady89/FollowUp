@@ -1,15 +1,16 @@
 package com.iteso.eduardo.followup2;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import com.iteso.eduardo.followup2.Database.DataBaseControl;
 import com.iteso.eduardo.followup2.Database.DataBaseHandler;
 import com.iteso.eduardo.followup2.Database.UpperClass;
 
+import java.text.DecimalFormat;
 import java.util.Vector;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -23,7 +24,9 @@ public class ActivityJuego extends AppCompatActivity {
     UpperClass lowerClass;
     DataBaseControl dbc;
     DataBaseHandler dbh;
+    boolean controlMusica;
     private Vector<Integer> randoms;
+    private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,16 +41,16 @@ public class ActivityJuego extends AppCompatActivity {
         HandlerUp= (TextView) findViewById(R.id.handleUp);
         HandlerDown= (TextView) findViewById(R.id.handleDown);
         Followers= (TextView) findViewById(R.id.upNumber);
-
-
         upperClass=new UpperClass();
         lowerClass=new UpperClass();
-
-
-    upperClass.cloneUpperClass(dbc.classCreator(generateRandomInt(), dbh));
-    lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(),dbh));
-    pintar();
-
+        upperClass.cloneUpperClass(dbc.classCreator(generateRandomInt(), dbh));
+        lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(),dbh));
+        pintar();
+        mediaPlayer = MediaPlayer.create(this, R.raw.musica);
+        controlMusica = true;/*Verificar con los Shered Preferences*/
+        if(controlMusica){
+            mediaPlayer.start();
+        }
     }
 
     public int generateRandomInt(){
@@ -72,8 +75,11 @@ public class ActivityJuego extends AppCompatActivity {
                     lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(),dbh));
                     pintar();
                 }
-               // else
-                    //GGS
+               else {
+                    intent = new Intent(this, ActivityPerdiste.class);
+                    startActivity(intent);
+                    finish();
+                }
                 break;
             case R.id.botonMenos:
                 if(lowerClass.esMenorOMayor(upperClass)) {
@@ -82,8 +88,11 @@ public class ActivityJuego extends AppCompatActivity {
                     lowerClass.cloneUpperClass(dbc.classCreator(generateRandomInt(),dbh));
                     pintar();
                 }
-               // else
-                    //GGS
+                else {
+                    intent = new Intent(this, ActivityPerdiste.class);
+                    startActivity(intent);
+                    finish();
+                }
                 break;
 
         }
@@ -91,11 +100,25 @@ public class ActivityJuego extends AppCompatActivity {
 
     }
     public void pintar(){
+        DecimalFormat formato=new DecimalFormat("###,###,###");
         NombreUp.setText(upperClass.getName());
         NombreDown.setText(lowerClass.getName());
         HandlerUp.setText(upperClass.getHandle());
         HandlerDown.setText(lowerClass.getHandle());
-        Followers.setText(""+upperClass.getFollowers()+"");
+        Followers.setText(""+formato.format(upperClass.getFollowers())+"");
         Puntostxt.setText(""+puntos+"");
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        controlMusica = !controlMusica;/*Verificar con shered preferences*/
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mediaPlayer.pause();
+    }
+
 }
