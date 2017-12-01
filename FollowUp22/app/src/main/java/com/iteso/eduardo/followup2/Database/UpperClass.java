@@ -1,16 +1,18 @@
 package com.iteso.eduardo.followup2.Database;
 
 import android.media.Image;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * Created by Eduardo on 24/11/2017.
  */
 
-public class UpperClass {
+public class UpperClass implements Parcelable {
     private String handle;
     private String name;
     private int followers;
-    private Image imagen;
+    private String imagen;
     private int id;
 
     public UpperClass (){
@@ -21,6 +23,7 @@ public class UpperClass {
         id=upperClass.getId();
         followers =upperClass.getFollowers();
         handle=upperClass.getHandle();
+        imagen=upperClass.getImagen();
 
     }
 
@@ -51,11 +54,11 @@ public class UpperClass {
         this.followers = followers;
     }
 
-    public Image getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(Image imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 
@@ -77,9 +80,35 @@ public class UpperClass {
     }
 
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
 
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(handle);
+        dest.writeString(name);
+        dest.writeInt(followers);
+        dest.writeString(imagen);
+        dest.writeInt(id);
+    }
+    protected UpperClass(Parcel in){
+        handle=in.readString();
+        name=in.readString();
+        followers=in.readInt();
+        imagen=in.readString();
+        id=in.readInt();
+    }
+    public static final Creator<UpperClass> CREATOR = new Creator<UpperClass>() {
+        @Override
+        public UpperClass createFromParcel(Parcel source) {
+            return new UpperClass(source);
+        }
 
-
-
-
+        @Override
+        public UpperClass[] newArray(int size) {
+            return new UpperClass[0];
+        }
+    };
 }

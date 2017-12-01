@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:paddingTop="50dp"
     android:gravity="center"
-    tools:context="com.iteso.eduardo.followup2.ActivityLoggs"
+    tools:context="com.iteso.eduardo.followup2.ActivityJuego"
     android:weightSum="1">
 
     <LinearLayout
@@ -15,14 +15,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="152dp"
-            android:layout_height="158dp"
-            android:layout_weight="0.40"
-            android:onClick="onClick"
-            app:srcCompat="@drawable/facebook" />
 
         <ImageButton
             android:id="@+id/imageButton2"

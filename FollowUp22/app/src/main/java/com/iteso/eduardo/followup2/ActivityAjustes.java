@@ -36,7 +36,7 @@ public class ActivityAjustes extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return  new ActivityLoggs();
+                    return  new ActivityTemas();
                 case 1:
                     return  new ActivityTemas();
                 default:
@@ -50,7 +50,7 @@ public class ActivityAjustes extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int pos) {
             switch (pos){
-                case 0: return getString(R.string.title_section1);
+                case 0: return "Sonido";
                 case 1: return getString(R.string.title_section2);
             }
             return super.getPageTitle(pos);

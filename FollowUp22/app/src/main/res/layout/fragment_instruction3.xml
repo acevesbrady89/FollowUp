@@ -3,42 +3,51 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:background="@android:color/holo_orange_light"/>
-    <TextView
-        android:padding="@dimen/Size25dp"
-        android:paddingTop="@dimen/Padding50dp"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/InstructionExplicacion3"
-        android:textSize="@dimen/Size25dp"
-        android:paddingBottom="@dimen/Padding50dp"/>
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:src="@drawable/logo"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:background="@color/BackLight"/>
+    <TextView
+        android:padding="@dimen/Size25dp"
+        android:paddingTop="@dimen/Padding50dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:gravity="center"
+        android:text="@string/InstructionExplicacion3"
+        android:textSize="20dp"
+        android:paddingBottom="@dimen/Padding50dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
+        android:layout_weight=".3"
         android:orientation="vertical"
         android:gravity="center">
         <Button
+            android:id="@+id/botonJugar"
             android:backgroundTint="@android:color/holo_orange_light"
             android:layout_width="match_parent"
             style="@android:style/Widget.DeviceDefault.Light.Button.Toggle"
             android:layout_height="wrap_content"
             android:text="@string/Jugar"
             android:layout_gravity="center"/>
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight=".5"
+        android:layout_weight=".3"
         android:gravity="center"
         android:orientation="vertical">
         <Button

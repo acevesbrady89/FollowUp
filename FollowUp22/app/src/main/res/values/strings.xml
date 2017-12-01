@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Proyecto</string>
+    <string name="app_name">FollowUp</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,15 +8,16 @@
     <string name="action_language">Cambiar de idioma</string>
     <string name="title_section1">Loggin</string>
     <string name="title_section2">Ajustes</string>
+    <string name="title_section3">Tema</string>
     <string name="title_sectionI1">Hoja 1</string>
     <string name="title_sectionI2">Hoja 2</string>
     <string name="title_sectionI3">Hoja 3</string>
     <string name="InstructionBienvenido">¡Bienvenido a FollowUp!</string>
-    <string name="InstructionExplicacion1">En este juego deberás adivinar quien tiene más seguidores en sus cuentas de Twitter</string>
-    <string name="InstructionExplicacion2">Lo único que debes hacer es hacer click en + o - según lo que creas correcto. Si lo tienes correcto podrás seguir acomulando puntos</string>
+    <string name="InstructionExplicacion1">En este juego deberás adivinar quien tiene más seguidores en sus cuentas de Twitter o Facebook </string>
+    <string name="InstructionExplicacion2">Selecciona si la cuenta de abajo tiene mas o menos seguidores</string>
     <string name="InstructionExplicacion3">Compite con tus amigos para ver quien alcanza los puntajes más altos. ¡Buena Suerte!</string>
     <string name="Nuevo_Record">25 Puntos          ¡Nuevo Record!</string>
-    <string name="BotonIniciar">Inicio</string>
+    <string name="BotonIniciar">Iniciar</string>
     <string name="Jugar">Jugar</string>
     <string name="activity_tema1">Default</string>
     <string name="activity_tema2">Light</string>

@@ -65,9 +65,9 @@ public class activityRules extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int pos) {
             switch (pos){
-                case 0: return getString(R.string.title_sectionI1);
-                case 1: return getString(R.string.title_sectionI2);
-                case 2: return getString(R.string.title_sectionI3);
+                case 0: return "Bienvenido";
+                case 1: return "Preparado";
+                case 2: return "Juega";
             }
             return super.getPageTitle(pos);
         }
@@ -100,7 +100,7 @@ public class activityRules extends AppCompatActivity {
         }
     }
     public static class FragInstructions3 extends Fragment{
-        Button buton;
+        Button buton,b2;
         public static FragInstructions3 newInstance(){
             FragInstructions3 fragment = new FragInstructions3();
 
@@ -115,11 +115,19 @@ public class activityRules extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             View view =inflater.inflate(R.layout.fragment_instruction3, container, false);
             buton=(Button) view.findViewById(R.id.fragment_instruction3_boton);
-
+            b2 =  (Button) view.findViewById(R.id.botonJugar);
             buton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent(((activityRules)getActivity()),ActivityMain.class);
+                    startActivity(intent);
+                    ((activityRules)getActivity()).finish();
+                }
+            });
+            b2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent(((activityRules)getActivity()),ActivityJuego.class);
                     startActivity(intent);
                     ((activityRules)getActivity()).finish();
                 }
@@ -136,4 +144,3 @@ public class activityRules extends AppCompatActivity {
 
 
 }
-

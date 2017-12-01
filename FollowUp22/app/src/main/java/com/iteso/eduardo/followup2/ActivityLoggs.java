@@ -12,19 +12,19 @@ import android.widget.Toast;
 
 public class ActivityLoggs extends Fragment {
 
-    protected ImageButton boton1;
+   // protected ImageButton boton1;
     protected ImageButton boton2;
     public ActivityLoggs() {}
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_loggs, container, false);
-        boton1 = (ImageButton) view.findViewById(R.id.imageButton);
+        //boton1 = (ImageButton) view.findViewById(R.id.imageButton);
         boton2 = (ImageButton) view.findViewById(R.id.imageButton2);
-        boton1.setOnClickListener(new View.OnClickListener() {
+        /*boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(((ActivityAjustes)getActivity()),"Facebook logg",Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
         boton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

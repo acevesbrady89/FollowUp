@@ -12,7 +12,8 @@ private WebView webView;
         setContentView(R.layout.activity_aboutus);
         webView = (WebView) findViewById(R.id.activity_aboutus_webview);
 
-        webView.loadUrl("file:///android_asset/PrivacyPolicy.html");
+        webView.loadUrl("https://docs.google.com/document/d/16u37YPLuX5BMAGeF8TJcC9a6REHVSxOCn9HMN0_OI6I/edit?usp=sharing");
+        finish();
 
     }
 }

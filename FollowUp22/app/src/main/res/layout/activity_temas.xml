@@ -26,30 +26,49 @@
             android:text="Seleciona un tema"
             android:gravity="center"
             android:textSize="20dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:gravity="top"
-            android:padding="20dp">
-
-            <RadioButton
-                android:checked="true"
-                android:id="@+id/activity_temas_tema2"
+            <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="@string/activity_tema2" />
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".5"
+                android:gravity="top"
+                android:padding="20dp">
 
-            <RadioButton
-                android:id="@+id/activity_temas_tema3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="@string/activity_tema3" />
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/activity_temas_tema2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Relajado" />
+
+                <RadioButton
+                    android:id="@+id/activity_temas_tema3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="Movido" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="99dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/activiy_temas_boton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Prev" />
+            </LinearLayout>
+        </LinearLayout>
+
 
 
         <Button
@@ -72,22 +91,22 @@
             android:text="Musica"
             android:textSize="20dp" />
 
-       <LinearLayout
-           android:layout_width="wrap_content"
-           android:orientation="horizontal"
-           android:layout_height="wrap_content">
-           <ImageButton
-               android:id="@+id/activity_temas_sonido"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:src="@android:drawable/ic_lock_silent_mode_off" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:id="@+id/activity_temas_sonido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_lock_silent_mode_off" />
 
-           <ImageButton
-               android:id="@+id/activity_temas_mute"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:src="@android:drawable/ic_lock_silent_mode" />
-       </LinearLayout>
+            <ImageButton
+                android:id="@+id/activity_temas_mute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_lock_silent_mode" />
+        </LinearLayout>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
