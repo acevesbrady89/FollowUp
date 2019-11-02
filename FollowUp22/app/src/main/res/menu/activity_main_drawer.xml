@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_medallas"
+            android:icon="@drawable/trofeo"
+            android:title="Medallas" />
+        <item
+            android:id="@+id/nav_ajustes"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Ajustes" />
+        <item
+            android:id="@+id/nav_rules"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="Instrucciones" />
+        <item
+            android:id="@+id/menu_AboutUs"
+            android:icon="@drawable/logo"
+            android:title="@string/Menu_Aboutus" />
+    </group>
+
+    <item android:title="Mas">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Estadisticas" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Mail" />
+        </menu>
+    </item>
+
+</menu>
